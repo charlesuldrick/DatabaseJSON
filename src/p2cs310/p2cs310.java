@@ -13,6 +13,7 @@ import java.util.logging.Logger;
 
 public class p2cs310 {
     
+    
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         try {
