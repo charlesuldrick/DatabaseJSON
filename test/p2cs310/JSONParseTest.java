@@ -1,23 +1,25 @@
-package edu.jsu.mcis;
+package p2cs310;
+
 
 import org.junit.*;
 import static org.junit.Assert.*;
 import org.json.simple.*;
 import org.json.simple.parser.*;
 
-import databasetest.*;
+//import assignment2.databaseProject.*;
+import java.sql.SQLException;
 
 public class JSONParseTest {
     
     private JSONParser parser;
     private JSONArray jsonDataOriginal;
     
-    DatabaseTest dbTest;
+    p2cs310 dbTest;
 
     @Before
     public void setUp() {
         
-        dbTest = new DatabaseTest();
+        dbTest = new p2cs310();
         
         // Prepare JSON Data
         
@@ -36,11 +38,15 @@ public class JSONParseTest {
     }
     
     @Test
-    public void testJSON() {
+    public void testJSON() throws SQLException {
         
         JSONArray jsonData = dbTest.getJSONData();
         assertEquals(jsonDataOriginal, jsonData);
         
+    }
+
+    private void assertEquals(JSONArray jsonDataOriginal, JSONArray jsonData) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
